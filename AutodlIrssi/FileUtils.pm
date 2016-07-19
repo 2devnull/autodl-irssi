@@ -65,7 +65,7 @@ sub saveRawDataToFile {
 # Creates and opens a temporary file
 sub createTempFile {
 	my $out = {};
-	($out->{fh}, $out->{filename}) = tempfile(undef, UNLINK => 0);
+	($out->{fh}, $out->{filename}) = tempfile(undef, UNLINK => 0, DIR=>'/autodl-torrents');
 	return $out;
 }
 
